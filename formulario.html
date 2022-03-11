@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt_BR>
+<head>
+    <meta charset="UTF-8">
+
+    <title>Formulário</title>
+    <link rel="stylesheet" href="estiloformulario.css">
+</head>
+<body>
+    <h1>Formulário Cadastral </h1>
+    <form action="pagina-processada-dados-form" method="post">
+
+               <fieldset>
+                <legend>Dados Gerais</legend>
+
+                <label for="nome">Nome: </label>
+                <input type="text" id="nome" placeholder="Digite o seu nome*" required>
+
+                <label for="data_nascimento">Data de nascimento: </label>
+                <input type="text" id=data_nascimento placeholder="Dia/Mês/Ano*" required>
+
+                <label for="cpf">CPF: </label>
+                <input type="text" maxlength="14" minlength="14" id="cpf"name="cpf" placeholder="000.000.000-00*" 
+                pattern="[0,9]{3} - [0,9]{4} - [0,9]{4} - [0,9]{2}" required>
+
+                <label for="tel">Telefone: </label>
+                <input type="text" maxlength="13" id="tel" name="tel" placeholder="11-99999-9999" 
+                pattern="[0,9]{2} - [0,9]{5} - [0,9]{4}">
+
+                <label for="email">Email:</label>
+                <input type="text" id="email" placeholder="E-mail*" required>
+                
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Endereço</legend>
+
+                <label for="tipo_de_endereço">Tipo: </label>
+                <select id="tipo_de_endereço">
+                <option value="Selecione"></option>
+                <option value="rua">Rua</option>
+                <option value="avenida">Avenida</option>
+                <option value="rodovia">Rodovia</option>
+                <option value="sitio">Sítio</option>
+                <option value="outro">Outro</option>
+            </select>
+
+            <label for="logadouro_end">Logadouro do Endereço</label>
+            <input type="text" id="logadouro_end">
+
+            <label for="numero">Nº: </label>
+            <input type="text" id="numero">
+
+            <label for="complemento">Complemento: </label>
+            <input type="text" id= complemento>
+            </fieldset>
+            
+            <fieldset>
+                <legend> Dados Complementares</legend>
+                <p>Escolha o sexo:</p>
+                <p>
+	                Homem: <input type="radio" name="sexo" /><br/>
+	                Mulher: <input type="radio" name="sexo" /><br/>
+                </p>
+                Outro: <input type="text" name="outro">
+                
+            </fieldset>
+
+            <fieldset> 
+                <legend>Fale Conosco</legend>
+
+                <label for="msg">Mensagem: </label>
+                <textarea name="msg" id="msg" rows="5" placeholder="Digite aqui a sua mensagem"></textarea>
+               
+            </fieldset>
+
+            <fieldset>
+                <button type="submit">Enviar a mensagem</button>
+                <button type="reset">Limpar os campos</button>
+            </fieldset>
+            
+    </form>
+</body>
+</html>
